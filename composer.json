@@ -1,0 +1,8 @@
+{
+	"require": {
+		"illuminate/database": "^6.14"
+	},
+	"autoload": {
+		"classmap": [ "classes" ]
+	}
+}
