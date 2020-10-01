@@ -9,4 +9,24 @@ class TaskModel extends Model{
 
         return $tasks;
     }
-}
+
+
+ public static function addTask($title, $description, $datetime_from, $datetime_to, $id_tasklist) {
+           
+                $inserted = DB::insert("INSERT INTO tasks 
+                                    (title,
+                                    description,
+                                    datetime_from,
+                                    datetime_to,
+                                    id_tasklist)
+                                     VALUES(
+                                         '$title',
+                                         '$description',
+                                         '$datetime_from',
+                                         '$datetime_to',
+                                         '$id_tasklist');");
+        
+                  return $inserted;
+                
+            } 
+ }
