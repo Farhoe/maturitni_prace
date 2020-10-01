@@ -35,6 +35,7 @@ $tasks = TaskModel::getAll();
                 <td><?php echo $task->description;?></td>
                 <td><?php echo $task->datetime_from;?></td>
                 <td><?php echo $task->datetime_to;?></td>
+                <td><?php echo $task->id_tasklist;?></td>
                 <?php
                       } ?>     
               </tr>  

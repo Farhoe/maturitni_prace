@@ -18,7 +18,20 @@ use \Illuminate\Database\Capsule\Manager as DB;
     $db->bootEloquent();
 
     class Model {
-       
+        
+        public static function getAll(int $idTaskList = 1) {
+            $where = '';
+            if($idTasklist != 1) {
+                $where = 'WHERE id_tasklist = ' . $idTasklist;
+            }
+            $tasks = DB::select('
+                SELECT *
+                FROM tasks '
+                . $where
+        );
+        return $tasks;
+    
+        }
     }
 
     
