@@ -39,10 +39,10 @@ if(isset($submit)) {
     <input type="text" name="title" placeholder="vystavit fakturu"> <br>
     <label for="text">Popis:</label>
     <input type="text" name="description" placeholder="co nejdriv vystavit fakturu za objednavku"> <br>
-    <label for="datetime-local">Zadáno:</label>
-    <input type="datetime-local" name="given" placeholder="1980-08-26 14:59:59"> <br>
-    <label for="datetime-local">Deadline:</label>
-    <input type="datetime-local" name="deadline" placeholder="1980-08-30 14:59:59"> <br>
+    <label for="datetime_for">Zadáno:</label>
+    <input type="datetime-local" name="datetime_from" placeholder="1980-08-26 14:59:59"> <br>
+    <label for="datetime_to">Deadline:</label>
+    <input type="datetime-local" name="datetime_to" placeholder="1980-08-30 14:59:59"> <br>
     <input type="submit" name="submit" value="Uložit task" > 
     </form>
     
