@@ -16,10 +16,10 @@ $logout = filter_input(INPUT_POST, 'logout');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Přihlášení</title>
-</head>
+</head> 
 <body>
 <?php 
-if(isset($_SESSION['loggedEmail'])){
+if(isset($_SESSION[' loggedEmail ' ] )) {
 ?>
 <p>Úspěšně přihlášen k účtu <?= $_SESSION['loggedEmail'];?>!</p>
 <?php } else { ?>
