@@ -12,26 +12,17 @@ use \Illuminate\Database\Capsule\Manager as DB;
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci'
         ]
-        );
+    );
 
     $db->setAsGlobal();
     $db->bootEloquent();
 
-    class Model {
-        
-        public static function getAll(int $idTaskList = 1) {
-            $where = '';
-            if($idTasklist != 1) {
-                $where = 'WHERE id_tasklist = ' . $idTasklist;
+    class Model
+    {
+        public static function getAll(int $id_tasklist = 1)
+        {
+            if ($id_tasklist != 1) {
+                $where = 'WHERE id_tasklist = ' . $id_tasklist;
             }
-            $tasks = DB::select('
-                SELECT *
-                FROM tasks '
-                . $where
-        );
-        return $tasks;
-    
         }
     }
-
-    

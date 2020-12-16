@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-$tasks = TaskModel::getAll();
+$tasks = TaskModel::getAllTasks();
 
 ?>
 <h1>Seznam tasků</h1>
@@ -20,6 +20,7 @@ $tasks = TaskModel::getAll();
         <th>Popis</th>
         <th>Začátek</th>
         <th>Konec</th>
+        <th>ID_tasklist</th>
     </thead>
 
     <tbody>
@@ -31,6 +32,7 @@ $tasks = TaskModel::getAll();
                 <td><?php echo $task->description;?></td>
                 <td><?php echo $task->datetime_from;?></td>
                 <td><?php echo $task->datetime_to;?></td>
+                <td><?php echo $task->id_tasklist;?></td>
                 <?php
                       } ?>     
               </tr>  

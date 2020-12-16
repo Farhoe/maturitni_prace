@@ -81,9 +81,9 @@
   </li>
 
   <li class="nav-item">
-    <a class="nav-link collapsed" href="order_list.php">
+    <a class="nav-link collapsed" href="roles.php">
       <i class="fas fa-fw fa-cog"></i>
-      <span>Work in Progress</span>
+      <span>Role</span>
     </a>
     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">

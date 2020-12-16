@@ -1,9 +1,11 @@
 <?php
-use Illuminate\Database\Capsule\Manager as DB;
+    use Illuminate\Database\Capsule\Manager as DB;
 
-class TaskModel extends Model{
+class TaskModel extends Model
+{
 
-    public static function getAll(){
+    public static function getAllTasks()
+    {
 
         $tasks = DB::select("SELECT * FROM tasks");
 
@@ -11,8 +13,10 @@ class TaskModel extends Model{
     }
 
 
-public static function addTask($title, $description, $datetime_from, $datetime_to, $id_tasklist) {
-                $inserted = DB::insert("INSERT INTO tasks 
+    public static function addTask($title, $description, $datetime_from, $datetime_to, $id_tasklist)
+    {
+                $inserted = DB::insert(
+                    "INSERT INTO tasks 
                                     (title,
                                     description,
                                     datetime_from,
@@ -23,11 +27,10 @@ public static function addTask($title, $description, $datetime_from, $datetime_t
                                          '$description',
                                          '$datetime_from',
                                          '$datetime_to',
-                                         '$id_tasklist');");
-            vad_dump($datetime_from, $datetime_to);
-
+                                         '$id_tasklist');"
+                );
                   return $inserted;
                 
-            } 
+    } 
 
- }
+}

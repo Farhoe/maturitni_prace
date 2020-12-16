@@ -1,7 +1,5 @@
 <?php require_once "header.php";?>
 
-
-
 <?php 
 $title = filter_input(INPUT_POST, 'title');
 $description = filter_input(INPUT_POST, 'description');
@@ -17,9 +15,9 @@ $message  = 'Stránka byla načtena klasickým způsobem';
 if(isset($submit)) {
     $message = 'Stránka byla načtěna s odeslaným formulářem.';
     $result = TaskModel::addTask($title, $description, $datetime_from, $datetime_to, $id_tasklist);
- if($result) {
-     $message .= 'Task byl úspěšně přidán do databáze'; 
- }
+    if($result) {
+        $message .= 'Task byl úspěšně přidán do databáze'; 
+    }
 }
 
 ?>
@@ -43,6 +41,8 @@ if(isset($submit)) {
     <input type="datetime-local" name="datetime_from" placeholder="1980-08-26 14:59:59"> <br>
     <label for="datetime_to">Deadline:</label>
     <input type="datetime-local" name="datetime_to" placeholder="1980-08-30 14:59:59"> <br>
+    <label for="id_tasklist">ID tasku</label>
+    <input type="number" name="id_tasklist" placeholder="1-2"> <br>
     <input type="submit" name="submit" value="Uložit task" > 
     </form>
     
