@@ -1,11 +1,11 @@
 {
     "title": "SB Admin 2",
-    "name": "startbootstrap-sb-admin-2",
+    "name": "startbootstrap-sb-Admin-2",
     "version": "4.1.1",
     "scripts": {
         "start": "node_modules/.bin/gulp watch"
     },
-    "description": "An open source Bootstrap 4 admin theme.",
+    "description": "An open source Bootstrap 4 Admin theme.",
     "keywords": [
         "css",
         "sass",
@@ -13,12 +13,12 @@
         "responsive",
         "theme",
         "template",
-        "admin",
+        "Admin",
         "app"
     ],
-    "homepage": "https://startbootstrap.com/themes/sb-admin-2",
+    "homepage": "https://startbootstrap.com/themes/sb-Admin-2",
     "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-sb-admin-2/issues",
+        "url": "https://github.com/StartBootstrap/startbootstrap-sb-Admin-2/issues",
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
@@ -28,7 +28,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-sb-admin-2.git"
+        "url": "https://github.com/StartBootstrap/startbootstrap-sb-Admin-2.git"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "5.13.1",

@@ -1,31 +1,31 @@
-# [Start Bootstrap - SB Admin 2](https://startbootstrap.com/themes/sb-admin-2/)
+# [Start Bootstrap - SB Admin 2](https://startbootstrap.com/themes/sb-Admin-2/)
 
-[SB Admin 2](https://startbootstrap.com/themes/sb-admin-2/) is an open source admin dashboard theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/).
+[SB Admin 2](https://startbootstrap.com/themes/sb-Admin-2/) is an open source Admin dashboard theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/).
 
-For the legacy Bootstrap 3 version of this theme, you can view the [last stable release](https://github.com/StartBootstrap/startbootstrap-sb-admin-2/releases/tag/v3.3.7%2B1) of SB Admin 2 for Bootstrap 3.
+For the legacy Bootstrap 3 version of this theme, you can view the [last stable release](https://github.com/StartBootstrap/startbootstrap-sb-Admin-2/releases/tag/v3.3.7%2B1) of SB Admin 2 for Bootstrap 3.
 
 ## Preview
 
-[![SB Admin 2 Preview](https://startbootstrap.com/assets/img/screenshots/themes/sb-admin-2.png)](https://startbootstrap.github.io/startbootstrap-sb-admin-2/)
+[![SB Admin 2 Preview](https://startbootstrap.com/assets/img/screenshots/themes/sb-Admin-2.png)](https://startbootstrap.github.io/startbootstrap-sb-Admin-2/)
 
-**[Launch Live Preview](https://startbootstrap.github.io/startbootstrap-sb-admin-2/)**
+**[Launch Live Preview](https://startbootstrap.github.io/startbootstrap-sb-Admin-2/)**
 
 ## Status
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-sb-admin-2/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-sb-admin-2.svg)](https://www.npmjs.com/package/startbootstrap-sb-admin-2)
-[![Build Status](https://travis-ci.org/StartBootstrap/startbootstrap-sb-admin-2.svg?branch=master)](https://travis-ci.org/StartBootstrap/startbootstrap-sb-admin-2)
-[![dependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-sb-admin-2/status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-sb-admin-2)
-[![devDependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-sb-admin-2/dev-status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-sb-admin-2?type=dev)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-sb-Admin-2/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-sb-Admin-2.svg)](https://www.npmjs.com/package/startbootstrap-sb-Admin-2)
+[![Build Status](https://travis-ci.org/StartBootstrap/startbootstrap-sb-Admin-2.svg?branch=master)](https://travis-ci.org/StartBootstrap/startbootstrap-sb-Admin-2)
+[![dependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-sb-Admin-2/status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-sb-Admin-2)
+[![devDependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-sb-Admin-2/dev-status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-sb-Admin-2?type=dev)
 
 ## Download and Installation
 
 To begin using this template, choose one of the following options to get started:
 
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/themes/sb-admin-2/)
-* Install via npm: `npm i startbootstrap-sb-admin-2`
-* Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-sb-admin-2.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-sb-admin-2)
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/themes/sb-Admin-2/)
+* Install via npm: `npm i startbootstrap-sb-Admin-2`
+* Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-sb-Admin-2.git`
+* [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-sb-Admin-2)
 
 ## Usage
 
@@ -43,7 +43,7 @@ You must have npm installed globally in order to use this build environment. Thi
 
 ## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-sb-admin-2/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](https://startbootstrap.com/themes/sb-admin-2/).
+Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-sb-Admin-2/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](https://startbootstrap.com/themes/sb-Admin-2/).
 
 ## About
 

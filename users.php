@@ -37,7 +37,7 @@
 
           $roleName = UserModel::getRole();
           echo "role: $roleName";
-          if ("$roleName == 'admin'") {
+          if ("$roleName == 'Admin'") {
               ;
           } ?>
 

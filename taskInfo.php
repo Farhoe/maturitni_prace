@@ -5,7 +5,7 @@
   $idTask = filter_input(INPUT_GET, 'id_task');
   $task = TaskModel::getTask($idTask);
   $roleName = UserModel::getRole();
-  if(in_array($roleName, ['admin', 'submitter', 'implementer'])) {
+  if(in_array($roleName, ['Admin', 'submitter', 'implementer'])) {
 ?>
 
 <h1>Popis úkolu: <?= $task->title; ?></h1>
@@ -15,3 +15,4 @@
     <p>Název a ID tasklistu: <?= $task->title; ?>, <?= $task->id_tasklist; ?></p>
 
       
+<?php  } ?>

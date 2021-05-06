@@ -17,6 +17,7 @@
               </tr>
             </thead>
             <tbody>  
+              
                 <?php 
                 try {
                     $tasklists = TasklistModel::getTasklists();
@@ -38,12 +39,6 @@
               </tr>            
             </tbody>
           </table>
-          <?php  $roleName = UserModel::getRole();
-                    if ($roleName == 'admin') {?>
-          <form action="add_tasklist.php">
-            <input class="btn btn-primary" type="submit" value="Přidat další.">
-          </form>
-                 <?php } ?>
       </div>
       </div>
       </div>

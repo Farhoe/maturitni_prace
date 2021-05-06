@@ -7,7 +7,7 @@ $roleName = UserModel::getRole();
 if(in_array($roleName, ['Admin', 'Zadavatel', 'Zaměstnanec'])) {
 ?>
 
-<?php foreach ($tasks as $task) { ?>
+
     <h1 class="h3 mb-2 text-gray-800">Seznam úkolů: <?php echo $tasklist->name; ?> </h1>
       <div class="card shadow mb-4">
         <div class="card-body">
@@ -23,7 +23,8 @@ if(in_array($roleName, ['Admin', 'Zadavatel', 'Zaměstnanec'])) {
                   <th>ID TaskList</th>
                 </tr>
               </thead>
-              <tbody>  
+              <tbody> 
+              <?php foreach ($tasks as $task) { ?>
               <tr>
                   <td><?php echo $task->id_task;?></td>
                   <td><a href="taskInfo.php?id_task=<?= $task->id_task ?>">
@@ -31,8 +32,10 @@ if(in_array($roleName, ['Admin', 'Zadavatel', 'Zaměstnanec'])) {
                   <td><?php echo $task->description;?></td>
                   <td><?php echo $task->datetime_from;?></td>
                   <td><?php echo $task->datetime_to;?></td>
-                  <td><?php echo $task->id_tasklist;?></td>    
-              </tr>            
+                  <td><?php echo $task->id_tasklist;?></td>  
+
+              </tr>    
+              <?php } ?>        
               </tbody>
             </table>
             <form action="add_task.php">
@@ -41,8 +44,7 @@ if(in_array($roleName, ['Admin', 'Zadavatel', 'Zaměstnanec'])) {
           </div>
         </div>
       </div>
-  <?php      
-    } ?>
+  
       <?php } else {
          header("location:index.php");
       } ?>
