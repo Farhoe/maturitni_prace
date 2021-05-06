@@ -17,6 +17,7 @@ use \Illuminate\Database\Capsule\Manager as DB;
     $db->setAsGlobal();
     $db->bootEloquent();
 
+
     class Model
     {
         public static function getAll(int $id_tasklist = 1)

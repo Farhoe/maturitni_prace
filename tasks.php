@@ -1,16 +1,10 @@
-<?php
-require_once "vendor/autoload.php"; +
-require_once "header.php";
-?>
+<?php require_once "vendor" . DIRECTORY_SEPARATOR . "autoload.php";?>
+<?php require_once "header.php";?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tásky</title>
-</head>
-<body>
+      <h1 class="h3 mb-2 text-gray-800">Tabulka tasků</h1>
+      <div class="card shadow mb-4">
+            <div class="card-body">
+              <div class="table-responsive">
 <?php
 $tasks = TaskModel::getAllTasks();
 
@@ -45,5 +39,3 @@ $tasks = TaskModel::getAllTasks();
                   <input class="btn btn-primary" type="submit" value="Přidat do TASKS.">
                 </form>
                         
-</body>
-</html>

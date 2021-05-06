@@ -7,8 +7,8 @@
               <div class="table-responsive">
               
       <?php 
-      if(in_array(UserModel::getRole(), array('admin', 'manager')));
-      ?>      
+      $roleName = UserModel::getRole();
+          ?>      
 
             <table class="table border">
             <thead>
@@ -17,7 +17,6 @@
                 <th>Křestní jméno</th>
                 <th>Příjmení</th>
                 <th>Email</th>
-                <th>Heslo</th>
                 <th>Telefonní číslo</th>
                 <th>Datum narození</th>
                 <th>Adresa</th>
@@ -27,7 +26,7 @@
               </tr>
             </thead> 
             <tbody>  
-              <?php  
+              <?php
                 try {
                     $users = UserModel::getUsers();
                 } catch (\Throwable $th) {
@@ -36,27 +35,26 @@
                     var_dump($th);
                 }
 
-                $roleName = UserModel::getRole();
-                echo "role: $roleName";
-                if("$roleName == 'admin'")
-
-              ?>
+          $roleName = UserModel::getRole();
+          echo "role: $roleName";
+          if ("$roleName == 'admin'") {
+              ;
+          } ?>
 
             <?php  foreach ($users as $user) {
-                ?> <tr>
-                <td><?php echo $user->id_user;?></td>
-                <td><?php echo $user->firstname;?></td>
-                <td><?php echo $user->lastname;?></td>
-                <td><?php echo $user->email;?></td>
-                <td><?php echo $user->password;?></td>
-                <td><?php echo $user->phone_number;?></td>
-                <td><?php echo $user->birth_date;?></td>
-                <td><?php echo $user->phone_number;?></td>
-                <td><?php echo $user->city;?></td>
-                <td><?php echo $user->address;?></td>
-                <td><?php echo $user->id_role;?></td>
+              ?> <tr>
+                <td><?php echo $user->id_user; ?></td>
+                <td><?php echo $user->firstname; ?></td>
+                <td><?php echo $user->lastname; ?></td>
+                <td><?php echo $user->email; ?></td>
+                <td><?php echo $user->phone_number; ?></td>
+                <td><?php echo $user->birth_date; ?></td>
+                <td><?php echo $user->phone_number; ?></td>
+                <td><?php echo $user->city; ?></td>
+                <td><?php echo $user->address; ?></td>
+                <td><?php echo $user->id_role; ?></td>
                 <?php
-                      } ?>     
+          } ?>     
               </tr>            
             </tbody>
           </table>
@@ -64,6 +62,7 @@
             <input class="btn btn-primary" type="submit" value="Přidat další do USERS.">
           </form>
       </div>
-      </div>
-      </div>
+        </div>
+          </div>
+   
 <?php require_once "footer.php";?>

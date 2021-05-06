@@ -31,7 +31,7 @@ class UserModel extends Model
                                          '$firstname',
                                          '$lastname',
                                          '$email',
-                                         '$password',
+                                         '$saltedPassword',
                                          '$birth_date',
                                          '$phone_number',
                                          '$city',
@@ -43,9 +43,9 @@ class UserModel extends Model
     public static function authenticate(string $email, string $password): bool
     {
         $saltedPassword = crypt($password, self::SALT);
-        $authenticate = DB::select("SELECT * FROM users WHERE email LINE '$email' AND password '$password'");
+        $authenticate = DB::select("SELECT * FROM users WHERE email LIKE '$email' AND password LIKE '$saltedPassword'");
 
-        if ($authenticate !== false) {
+        if (count($authenticate) > 0) {
             session_start();
             $_SESSION['loggedEmail'] = $email;
             return true;
@@ -53,11 +53,22 @@ class UserModel extends Model
         return false;
     }
 
-    public static function getRole()
+    public static function getRole(): string
     {
-        $role=DB::select(
-            "SELECT *
-                        FROM roles"
-        );
+        $roleName = 'guest';
+
+        if (isset($_SESSION['loggedEmail'])) {
+            $role = DB::select(
+                "SELECT r.name
+                        FROM users u
+                        JOIN roles r
+                        ON u.id_role = r.id_role
+                        WHERE u.email LIKE  '" . $_SESSION['loggedEmail'] . "'"
+            );
+            if (count($role) > 0) {
+                $roleName = $role[0]->name;
+            }
+        }
+            return $roleName;
     }
 }

@@ -1,7 +1,9 @@
 <?php
+    session_start();
     require_once "vendor/autoload.php";
-    require_once "classes/Model.php"
-?>
+    $roleName = UserModel::getRole();
+    if (in_array($roleName, ['Admin', 'Zadavatel', 'Zaměstnanec'])) {
+        ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,16 +52,12 @@
   <!-- Divider -->
   <hr class="sidebar-divider">
 
-  <!-- Heading -->
-  <div class="sidebar-heading">
-    Interface
-  </div>
 
  
   <li class="nav-item">
-    <a class="nav-link collapsed" href="tasks.php">
+    <a class="nav-link collapsed" href="tasklist.php">
       <i class="fas fa-fw fa-cog"></i>
-      <span>Tásky</span>
+      <span>Úkoly</span>
     </a>
     <div id="collapseTwo" class="collapse">
       <div class="bg-white py-2 collapse-inner rounded">
@@ -240,10 +238,20 @@
         <div class="topbar-divider d-none d-sm-block"></div>
 
         <!-- Nav Item - User Information -->
-        <li class="nav-item dropdown no-arrow">
-          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Radar</span>
-            <img class="img-profile rounded-circle" src="css\Hanryang.jpg">
+        <ul class="navbar-nav ml-auto">
+        
+         <!-- Login     -->
+         
+     
+        
+  <?php if (isset($_SESSION['loggedEmail'])) { ?>
+    <!--  Logout    -->
+    <p class="login_jmeno">Jste přihlášen jako: <b> <?php echo $_SESSION['loggedEmail'];?> </p>
+    <a href="login/user_logout.php" class="btn btn-primary" type="button"> Odhlásit se</a>
+  <?php   } ?>
+
+
+    </nav>
           </a>
           <!-- Dropdown - User Information -->
           <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -270,10 +278,13 @@
       </ul>
 
     </nav>
+
+
     <!-- End of Topbar -->
     
         <!-- Begin Page Content -->
         <div class="container-fluid">
+
 
         <!-- Table styles -->
         <style>
@@ -285,3 +296,7 @@
         }
         </style>
         
+        <?php
+    } else {
+      header("location:Login/user_login.php");
+    }

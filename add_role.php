@@ -1,4 +1,3 @@
-<?php require_once "classes/Model.php"; ?>
 <?php require_once "header.php"; ?>
 <?php
 $name = filter_input(INPUT_POST, 'name');

@@ -1,46 +1,51 @@
 <?php require_once "header.php";?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tásky</title>
-</head>
-<body>
-<?php
-$tasks = TaskModel::getAllTasks();
-
+<?php 
+  $roleName = UserModel::getRole();
+  if(in_array($roleName, ['Admin', 'Zadavatel', 'Zaměstnanec'])) {
 ?>
-<h1>Seznam tasků</h1>
-<table class="table">
-    <thead>
-        <th>ID</th>
-        <th>Název</th>
-        <th>Popis</th>
-        <th>Začátek</th>
-        <th>Konec</th>
-        <th>ID_tasklist</th>
-    </thead>
 
-    <tbody>
-    
-            <?php  foreach ($tasks as $task) {
+      <h1 class="h3 mb-2 text-gray-800">Tabulka kategorií úkolů</h1>
+      <div class="card shadow mb-4">
+            <div class="card-body">
+              <div class="table-responsive">
+            <table class="table border">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Název</th>
+                <th>Popis</th>
+              </tr>
+            </thead>
+            <tbody>  
+                <?php 
+                try {
+                    $tasklists = TasklistModel::getTasklists();
+                } catch (\Throwable $th) {
+                    echo "Nepovedl se SELECT ze seznamů!" . "<br>";
+                    $tasklists = array();
+                    var_dump($th);
+                }           
+                ?>
+            <?php  foreach ($tasklists as $tasklist) {
+               
                 ?> <tr>
-                <td><?php echo $task->id_task;?></td>
-                <td><?php echo $task->title;?></td>
-                <td><?php echo $task->description;?></td>
-                <td><?php echo $task->datetime_from;?></td>
-                <td><?php echo $task->datetime_to;?></td>
-                <td><?php echo $task->id_tasklist;?></td>
+                <td><?php echo $tasklist->id_tasklist;?></td>
+                <td><a href="tasklistinfo.php?id_tasklist=<?= $tasklist->id_tasklist ?>">
+                <?php echo $tasklist->name;?></a></td>
+                <td><?php echo $tasklist->description;?></td>
                 <?php
-                      } ?>     
-              </tr>  
-    </tbody>
-</table>
-    <form action="add_task.php">
-                  <input type="submit" value="Přidat do TASKS.">
-                </form>
-                        
-</body>
-</html>
+            } ?>     
+              </tr>            
+            </tbody>
+          </table>
+          <?php  $roleName = UserModel::getRole();
+                    if ($roleName == 'admin') {?>
+          <form action="add_tasklist.php">
+            <input class="btn btn-primary" type="submit" value="Přidat další.">
+          </form>
+                 <?php } ?>
+      </div>
+      </div>
+      </div>
+      <?php }?>
+<?php require_once "footer.php";?>

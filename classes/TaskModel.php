@@ -33,4 +33,38 @@ class TaskModel extends Model
                 
     } 
 
+    public static function getTaskByTasklist($idTask)
+    {
+        $tasks = DB::select("SELECT * FROM tasks WHERE id_tasklist = $idTask");
+        return $tasks;
+
+    }
+
+    public static function getTask($idTask) 
+    {
+        $task = DB::select("SELECT * FROM tasks WHERE id_task = $idTask");
+        return $task[0];
+    }
+
+    public static function getTasksByTasklistId($idTasklist)
+
+    {
+        $tasks =DB ::select("SELECT * FROM tasks WHERE id_tasklist = $idTasklist");
+
+        return $tasks;
+    }
+
+    public static function getTaskLists()
+    {
+        $tasklists = DB::select("SELECT * FROM tasklists WHERE id_tasklist = $idTasklist");
+        return $tasklists;
+    }
+
+    public static function getTasklist($idTasklist)
+    {
+        $tasklist = DB::select("SELECT * FROM tasklists WHERE id_tasklist = $idTasklist");
+        return $tasklist[0];
+    }
+    
+
 }

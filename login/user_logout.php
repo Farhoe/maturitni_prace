@@ -3,4 +3,6 @@
 session_start();
 session_destroy();
 
-header('location: index.php?logout=1');
+header('location: ../index.php?logout=1');
+
+?>
